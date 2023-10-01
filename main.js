@@ -101,6 +101,11 @@ if (selectedTheme) {
 
 themeButton.addEventListener('click', toggleTheme);
 
+       window.addEventListener('load', function () { 
+         const loaderContainer = document.querySelector('.loader-container'); 
+         loaderContainer.style.display = 'none'; 
+       });
+
 const sr = ScrollReveal({
   origin: 'top',
   distance: '60px',
