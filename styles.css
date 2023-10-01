@@ -1570,12 +1570,12 @@ img {
    } 
   
    .loader { 
-     border: 6px solid black; 
-     border-top: 6px solid white; 
+     border: 6px solid #646464; 
+     border-top: 6px solid #000000;
      border-radius: 50%; 
      width: 50px; 
      height: 50px; 
-     animation: spin 1.5s linear infinite; 
+     animation: spin 1s linear infinite; 
    } 
   
    @keyframes spin { 
