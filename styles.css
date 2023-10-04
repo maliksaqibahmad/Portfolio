@@ -1581,7 +1581,7 @@ img {
   }
  
   .loader { 
-    border: 6px solid var(--text-color); 
+    border: 6px solid var(--title-color); 
     border-top: 6px solid var(--body-color);
     border-radius: 50%; 
     width: 50px; 
