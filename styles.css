@@ -720,6 +720,11 @@ img {
   text-align: center;
 }
 
+.certs__description a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
 
 .services__container {
   grid-template-columns: 250px;
@@ -1555,7 +1560,6 @@ img {
     right: 3rem;
   }
 }
-
 .loader-container { 
     position: fixed; 
     top: 0; 
