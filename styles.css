@@ -694,14 +694,14 @@ img {
   position: absolute;
   width: 100%;
   height: 100%;
-  border: 4px solid var(--first-color);
+  border: 6rem solid var(--black-color);
   top: 0;
   left: 0;
   transition: transform .4s;
 }
 
 .certs__card:hover .certs__border {
-  transform: translate(.75rem, .75rem)
+  transform: translate(.75rem, .75rem);
 }
 
 .certs__box {
@@ -752,14 +752,14 @@ img {
   position: absolute;
   width: 100%;
   height: 100%;
-  border: 4px solid var(--first-color);
+  border: 3rem solid var(--black-color);
   top: 0;
   left: 0;
   transition: transform .4s;
 }
 
 .services__card:hover .services__border {
-  transform: translate(.75rem, .75rem)
+  transform: translate(.50rem, .50rem);
 }
 
 .services__icon {
@@ -1449,6 +1449,9 @@ img {
   }
   .button__ghost i {
     font-size: 1.5rem;
+  }
+  .certs__container {
+    grid-template-columns:  30% 30% 30%;
   }
   .services__container {
     grid-template-columns: repeat(3, 282px);
