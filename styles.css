@@ -708,13 +708,12 @@ img {
 
 @media (max-width: 768px) {
   .skills {
-      justify-content: flex-start;
+      justify-content: center;
       margin: 3rem 0 0;
   }
 
   .skill {
-      justify-content: center;
-      padding: 1rem;
+      margin: 1rem;
   }
 }
 
