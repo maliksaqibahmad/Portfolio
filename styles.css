@@ -720,6 +720,14 @@ img {
       max-width: 100%;
       margin: .8rem;
   }
+
+  .skill:hover {
+    transform: none !important;
+  }
+  
+  .skill:active {
+    transform: translateY(1.01rem) !important;
+  }
 }
 
 .certs__container {
