@@ -686,11 +686,15 @@ img {
   margin: 3rem;
   max-width: 10rem;
   cursor: pointer;
-  transition: .3s !important;
+  transition: .4s !important;
 }
 
 .skill:hover {
-  transform: translateY(-.5rem) !important;
+  transform: scale(1.1) !important;
+}
+
+.skill:active {
+  transform: translateY(1.01rem) !important;
 }
 
 .skill img {
