@@ -686,7 +686,7 @@ img {
   margin: 3rem;
   max-width: 10rem;
   cursor: pointer;
-  transition: .4s !important;
+  transition: .3s !important;
 }
 
 .skill:hover {
