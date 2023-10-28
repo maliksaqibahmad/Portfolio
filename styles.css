@@ -701,6 +701,7 @@ img {
   width: 5rem;
   margin: 0 auto;
   display: block;
+  outline: none;
 }
 
 .skill p {
