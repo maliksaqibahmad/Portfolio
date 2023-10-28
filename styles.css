@@ -690,7 +690,7 @@ img {
 }
 
 .skill:hover {
-  transform: translateY(-1rem) !important;
+  transform: translateY(-.5rem) !important;
 }
 
 .skill img {
