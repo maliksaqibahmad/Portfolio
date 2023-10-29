@@ -734,7 +734,7 @@ img {
   grid-template-columns: 50%;
   justify-content: center;
   row-gap: 2rem;
-  column-gap: 2rem;
+  column-gap: 4rem;
   padding-top: 1rem;
 }
 
