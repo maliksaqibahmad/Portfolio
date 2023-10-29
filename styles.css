@@ -670,10 +670,6 @@ img {
 -moz-box-shadow: 10px 10px 0px 0px var(--black-color);
 }
 
-.certs__content:active {
-  transform: translateY(1.01rem) !important;
-}
-
 .certs__box {
   position: absolute;
   width: 24px;
@@ -724,10 +720,6 @@ img {
   box-shadow: 10px 10px 0px 0px var(--black-color);
 -webkit-box-shadow: 10px 10px 0px 0px var(--black-color);
 -moz-box-shadow: 10px 10px 0px 0px var(--black-color);
-}
-
-.services__content:active {
-  transform: translateY(1.01rem) !important;
 }
 
 .services__icon {
@@ -781,10 +773,6 @@ img {
   box-shadow: 10px 10px 0px 0px var(--black-color);
 -webkit-box-shadow: 10px 10px 0px 0px var(--black-color);
 -moz-box-shadow: 10px 10px 0px 0px var(--black-color);
-}
-
-.projects__card:active {
-  transform: translateY(1.01rem) !important;
 }
 
 .projects__image {
