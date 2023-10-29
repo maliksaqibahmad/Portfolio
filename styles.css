@@ -847,10 +847,6 @@ img {
   color: var(--first-color)
 }
 
-.projects__card:hover {
-  background-color: var(--white-color);
-}
-
 .projects__img {
   width: 300px;
   height: 150px;
@@ -1024,7 +1020,7 @@ img {
 }
 
 .contact__social-description-1 {
-  color: var(--white-color);
+  color: var(--title-color);
   font-size: var(--small-font-size);
   font-weight: var(--font-semi-bold);
 }
