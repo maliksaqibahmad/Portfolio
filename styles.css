@@ -734,6 +734,7 @@ img {
   grid-template-columns: 50%;
   justify-content: center;
   row-gap: 2rem;
+  column-gap: 2rem;
   padding-top: 1rem;
 }
 
@@ -748,21 +749,14 @@ img {
   padding: 1rem 1rem;
   z-index: 5;
   position: relative;
-  transition: background-color .4s, border .4s;
+  transition: .4s;
 }
 
-.certs__border {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border: 3rem solid var(--black-color);
-  top: 0;
-  left: 0;
-  transition: transform .4s;
-}
-
-.certs__card:hover .certs__border {
-  transform: translate(1.25rem, 1.25rem);
+.certs__content:hover {
+  transform: scale(1.1) !important;
+  box-shadow: 10px 10px 0px 0px var(--black-color);
+-webkit-box-shadow: 10px 10px 0px 0px var(--black-color);
+-moz-box-shadow: 10px 10px 0px 0px var(--black-color);
 }
 
 .certs__box {
@@ -783,7 +777,7 @@ img {
 
 .certs__description a {
   text-decoration: none;
-  color: var(--black-color);
+  color: var(--text-color);
 }
 
 
@@ -806,21 +800,14 @@ img {
   padding: 6rem 1rem 3rem;
   z-index: 5;
   position: relative;
-  transition: background-color .4s, border .4s;
+  transition: .4s;
 }
 
-.services__border {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border: 3rem solid var(--black-color);
-  top: 0;
-  left: 0;
-  transition: transform .4s;
-}
-
-.services__card:hover .services__border {
-  transform: translate(.50rem, .50rem);
+.services__content:hover {
+  transform: scale(1.1) !important;
+  box-shadow: 10px 10px 0px 0px var(--black-color);
+-webkit-box-shadow: 10px 10px 0px 0px var(--black-color);
+-moz-box-shadow: 10px 10px 0px 0px var(--black-color);
 }
 
 .services__icon {
