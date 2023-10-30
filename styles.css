@@ -424,13 +424,9 @@ img {
   position: absolute;
   bottom: -.75rem;
   right: -.75rem;
-  border: 4px solid var(--black-color);
+  border: 5rem solid var(--first-color);
   z-index: 5;
   transition: .4s;
-}
-
-.home__img:hover + .home__shadow  {
-  border: 4px solid var(--first-color);
 }
 
 .home__arrow,
@@ -948,7 +944,7 @@ img {
 }
 
 .contact__input::placeholder {
-  color: var(--text-color-light);
+  color: var(--white-color);
   transition: opasity .4s;
 }
 
@@ -964,7 +960,7 @@ img {
   position: absolute;
   top: 8px;
   left: 10px;
-  color: var(--text-color-light);
+  color: var(--white-color);
   font-size: var(--small-font-size);
   font-weight: var(--font-medium);
   background-color: var(--black-color);
@@ -1274,7 +1270,7 @@ img {
   .home__shadow {
     right: -1.25rem;
     bottom: -1.25rem;
-    border: 6px solid var(--black-color);
+    border: 10rem solid var(--first-color);
   }
   .home__name,
   .home__description {
