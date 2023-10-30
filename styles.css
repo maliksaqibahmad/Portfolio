@@ -1432,6 +1432,15 @@ img {
   .services__card:hover .services__border {
     transform: translate(1.25rem, 1.25rem);
   }
+  .services__content:active {
+    transform: scale(1) !important;
+  }
+  .certs__content:active {
+    transform: scale(1) !important;
+  }
+  .projects__card:active {
+    transform: scale(1) !important;
+  }
   .projects__container {
     grid-template-columns: repeat(3, 352px);
     padding-block: 3rem 1rem;
