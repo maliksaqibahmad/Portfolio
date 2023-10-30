@@ -1016,7 +1016,7 @@ img {
 }
 
 .contact__social-description-1 {
-  color: var(--title-color);
+  color: var(--white-color);
   font-size: var(--small-font-size);
   font-weight: var(--font-semi-bold);
 }
