@@ -148,6 +148,5 @@ const updateMetaThemeColor = () => {
 };
 
 themeButton.addEventListener('click', () => {
-  toggleTheme(); 
   updateMetaThemeColor();
 });
