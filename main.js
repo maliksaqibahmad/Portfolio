@@ -157,8 +157,8 @@ const toggleThemeTab = () => {
 };
 
 themeButtonTab.addEventListener('click', () => {
-  toggleTheme(); // Toggle the theme
-  toggleMetaTheme(); // Update the meta tag color immediately
+  toggleTheme();
+  toggleMetaTheme();
 });
 
 if (selectedThemeTab === 'dark') {
