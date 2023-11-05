@@ -10,8 +10,9 @@
   --title-color: hsl(0, 0%, 0%);
   --text-color: hsl(0, 0%, 35%);
   --text-color-light: hsl(0, 0%, 64%);
-  --body-color: hsl(0, 0%, 100%);
-  --container-color: hsl(0, 0%, 100%);
+  --body-color: hsl(0, 0%, 90%);
+  --container-color: hsl(0, 0%, 90%);
+  --header-color: hsl(0,0%, 95%);
 
   --body-font: "Bai Jamjuree", sans-serif;
   --biggest-font-size: 2.5rem;
@@ -102,6 +103,7 @@ img {
   --text-color: hsl(0, 0%, 70%);
   --body-color: hsl(0, 0%, 8%);
   --container-color: hsl(0, 0%, 12%);
+  --header-color: hsl(0,0%, 5%);
 }
 
 .dark-theme .shadow-header {
@@ -237,7 +239,7 @@ img {
   width: 100%;
   top: 0;
   left: 0;
-  background-color: var(--body-color);
+  background-color: var(--header-color);
   z-index: var(--z-fixed);
   transition: .3s;
 }
@@ -408,11 +410,11 @@ img {
 }
 
 .home__image {
-  width: 220px;
   position: relative;
 }
 
 .home__img {
+  width: 20rem;
   position: relative;
   z-index: 10;
 }
@@ -424,7 +426,7 @@ img {
   position: absolute;
   bottom: -.75rem;
   right: -.75rem;
-  border: 5rem solid var(--first-color);
+  border: 5rem solid var(--container-color);
   z-index: 5;
   transition: .4s;
 }
@@ -1264,13 +1266,10 @@ img {
     grid-column: 2/3;
     grid-row: 1/3;
   }
-  .home__image {
-    width: 350px;
-  }
   .home__shadow {
-    right: -1.25rem;
-    bottom: -1.25rem;
-    border: 10rem solid var(--first-color);
+    right: -1rem;
+    bottom: -1rem;
+    border: 2rem solid var(--first-color);
   }
   .home__name,
   .home__description {
