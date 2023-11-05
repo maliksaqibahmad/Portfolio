@@ -135,13 +135,19 @@ window.onscroll = function() {
     prevScrollPos = currentScrollPos;
 };
 
-const toggleDarkMode = () => {
-  const body = document.body;
-  body.classList.toggle('dark-theme');
+const updateMetaThemeColor = () => {
+  const metaTag = document.querySelector('meta[name="theme-color"]');
 
-  if (body.classList.contains('dark-theme')) {
-      document.querySelector("meta[name=theme-color]").setAttribute("content", "hsl(0, 0%, 8%)");
+  const currentTheme = getCurrentTheme();
+
+  if (currentTheme === 'dark') {
+    metaTag.setAttribute('content', 'hsl(0, 0%, 8%)');
   } else {
-      document.querySelector("meta[name=theme-color]").setAttribute("content", "rgb(230, 230, 230)");
+    metaTag.setAttribute('content', 'hsl(0, 0%, 90%)');
   }
 };
+
+themeButton.addEventListener('click', () => {
+  toggleTheme(); 
+  updateMetaThemeColor();
+});
