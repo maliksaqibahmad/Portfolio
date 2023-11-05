@@ -145,3 +145,17 @@ const toggleDarkMode = () => {
       document.querySelector("meta[name=theme-color]").setAttribute("content", "rgb(230, 230, 230)");
   }
 };
+
+const toggleDarkModeTab = () => {
+  const body = document.body;
+  body.classList.toggle('dark');
+
+  if (body.classList.contains('dark')) {
+      document.querySelector("meta[name=theme-color]").setAttribute("content", "#000000");
+  } else {
+      document.querySelector("meta[name=theme-color]").setAttribute("content", "#ffffff");
+  }
+};
+
+// Check if dark mode is active and update tab color when the themeButton is clicked
+themeButton.addEventListener('click', toggleDarkMode);
