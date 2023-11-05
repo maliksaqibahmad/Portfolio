@@ -137,9 +137,9 @@ window.onscroll = function() {
 
 const toggleDarkMode = () => {
   const body = document.body;
-  body.classList.toggle('dark');
+  body.classList.toggle('dark-theme');
 
-  if (body.classList.contains('dark')) {
+  if (body.classList.contains('dark-theme')) {
       document.querySelector("meta[name=theme-color]").setAttribute("content", "hsl(0, 0%, 8%)");
   } else {
       document.querySelector("meta[name=theme-color]").setAttribute("content", "rgb(230, 230, 230)");
