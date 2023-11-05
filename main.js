@@ -145,27 +145,3 @@ const toggleDarkMode = () => {
       document.querySelector("meta[name=theme-color]").setAttribute("content", "rgb(230, 230, 230)");
   }
 };
-
-// Function to toggle dark mode
-const toggleDarkModeTab = () => {
-  const body = document.body;
-  body.classList.toggle('dark');
-
-  if (body.classList.contains('dark')) {
-      document.querySelector("meta[name=theme-color]").setAttribute("content", "#000000");
-      localStorage.setItem('selected-theme', 'dark');
-  } else {
-      document.querySelector("meta[name=theme-color]").setAttribute("content", "#ffffff");
-      localStorage.setItem('selected-theme', 'light');
-  }
-};
-
-// Check the initial theme preference from localStorage
-const selectedThemeTab = localStorage.getItem('selected-theme');
-if (selectedThemeTab === 'dark') {
-  document.body.classList.add('dark');
-  document.querySelector("meta[name=theme-color]").setAttribute("content", "#000000");
-}
-
-// Check if dark mode is active and update tab color when the themeButton is clicked
-themeButton.addEventListener('click', toggleDarkMode);
