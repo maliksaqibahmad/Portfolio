@@ -138,7 +138,7 @@ window.onscroll = function() {
 const toggleThemeTab = () => {
   const metaTag = document.querySelector('meta[name="theme-color"]');
   const darkModeColor = 'hsl(0, 0%, 8%)';
-  const lightModeColor = 'hsl(0, 0%, 90%)';
+  const lightModeColor = 'hsl(0, 0%, 80%)';
 
   const isDarkMode = document.body.classList.contains('dark-theme');
 
