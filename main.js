@@ -156,7 +156,10 @@ const toggleThemeTab = () => {
   }
 };
 
-themeButton.addEventListener('click', toggleTheme);
+themeButtonTab.addEventListener('click', () => {
+  toggleTheme(); // Toggle the theme
+  toggleMetaTheme(); // Update the meta tag color immediately
+});
 
 if (selectedThemeTab === 'dark') {
   document.body.classList.add('dark-theme');
