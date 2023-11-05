@@ -143,9 +143,9 @@ const toggleThemeTab = () => {
   const isDarkMode = document.body.classList.contains('dark-theme');
 
   if (isDarkMode) {
-    metaTag.setAttribute('content', 'darkModeColor');
+    metaTag.setAttribute('content', darkModeColor);
   } else {
-    metaTag.setAttribute('content', 'lightModeColor');
+    metaTag.setAttribute('content', lightModeColor);
   }
 };
 
