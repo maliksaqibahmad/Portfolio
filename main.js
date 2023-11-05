@@ -138,15 +138,11 @@ window.onscroll = function() {
 const toggleThemeTab = () => {
   const metaTag = document.querySelector('meta[name="theme-color"]');
 
-  // Check if the body has a dark theme class
-  const isDarkMode = document.body.classList.contains('dark');
+  const isDarkMode = document.body.classList.contains('dark-theme');
 
   if (isDarkMode) {
-    // Set the meta tag content to the dark mode color
     metaTag.setAttribute('content', 'hsl(0, 0%, 8%)');
   } else {
-    // Set the meta tag content to the default color for light mode
-    // Replace 'defaultColor' with your desired light mode color value
     metaTag.setAttribute('content', 'hsl(0, 0%, 90%)');
   }
 };
