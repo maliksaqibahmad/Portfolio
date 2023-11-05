@@ -12,7 +12,6 @@
   --text-color-light: hsl(0, 0%, 64%);
   --body-color: hsl(0, 0%, 90%);
   --container-color: hsl(0, 0%, 90%);
-  --header-color: hsl(0,0%, 95%);
 
   --body-font: "Bai Jamjuree", sans-serif;
   --biggest-font-size: 2.5rem;
@@ -103,7 +102,6 @@ img {
   --text-color: hsl(0, 0%, 70%);
   --body-color: hsl(0, 0%, 8%);
   --container-color: hsl(0, 0%, 12%);
-  --header-color: hsl(0,0%, 5%);
 }
 
 .dark-theme .shadow-header {
@@ -239,7 +237,7 @@ img {
   width: 100%;
   top: 0;
   left: 0;
-  background-color: var(--header-color);
+  background-color: var(--body-color);
   z-index: var(--z-fixed);
   transition: .3s;
 }
