@@ -76,7 +76,7 @@ const scrollActive = () => {
 }
 window.addEventListener('scroll', scrollActive)
 
-const themeButton = document.getElementById('light-button'); // Select the theme button
+const themeButton = document.getElementById('light-button');
 const darkTheme = 'dark-theme';
 const iconTheme = 'ri-sun-line';
 
@@ -126,13 +126,22 @@ const header = document.querySelector('.header');
 window.onscroll = function() {
     const currentScrollPos = window.pageYOffset;
 
-    // Check if the user is scrolling down
     if (prevScrollPos < currentScrollPos) {
         header.style.top = `-${header.clientHeight}px`;
     } else {
-        // Scrolling up, show the header
         header.style.top = '0';
     }
 
     prevScrollPos = currentScrollPos;
+};
+
+const toggleDarkMode = () => {
+  const body = document.body;
+  body.classList.toggle('dark');
+
+  if (body.classList.contains('dark')) {
+      document.querySelector("meta[name=theme-color]").setAttribute("content", "hsl(0, 0%, 8%)");
+  } else {
+      document.querySelector("meta[name=theme-color]").setAttribute("content", "rgb(230, 230, 230)");
+  }
 };
