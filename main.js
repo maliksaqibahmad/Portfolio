@@ -135,16 +135,30 @@ window.onscroll = function() {
     prevScrollPos = currentScrollPos;
 };
 
-const toggleThemeTab = () => {
-  const metaTag = document.querySelector('meta[name="theme-color"]');
+const themeButtonTab = document.getElementById('light-button');
+const metaTag = document.querySelector('meta[name="theme-color"]');
+const darkModeColor = 'hsl(0, 0%, 8%)';
+const lightModeColor = 'hsl(0, 0%, 85%)';
 
+const selectedThemeTab = localStorage.getItem('selected-theme');
+
+const toggleThemeTab = () => {
   const isDarkMode = document.body.classList.contains('dark-theme');
 
   if (isDarkMode) {
-    metaTag.setAttribute('content', 'hsl(0, 0%, 8%)');
+    document.body.classList.remove('dark-theme');
+    metaTag.setAttribute('content', lightModeColor);
+    localStorage.setItem('selected-theme', 'light');
   } else {
-    metaTag.setAttribute('content', 'hsl(0, 0%, 85%)');
+    document.body.classList.add('dark-theme');
+    metaTag.setAttribute('content', darkModeColor);
+    localStorage.setItem('selected-theme', 'dark');
   }
 };
 
 themeButton.addEventListener('click', toggleTheme);
+
+if (selectedThemeTab === 'dark') {
+  document.body.classList.add('dark-theme');
+  metaTag.setAttribute('content', darkModeColor);
+}
