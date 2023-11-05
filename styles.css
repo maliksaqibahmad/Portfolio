@@ -424,7 +424,7 @@ img {
   position: absolute;
   bottom: -.75rem;
   right: -.75rem;
-  border: 5rem solid var(--container-color);
+  border: 5rem solid var(--first-color);
   z-index: 5;
   transition: .4s;
 }
