@@ -137,13 +137,15 @@ window.onscroll = function() {
 
 const toggleThemeTab = () => {
   const metaTag = document.querySelector('meta[name="theme-color"]');
+  const darkModeColor = 'hsl(0, 0%, 8%)';
+  const lightModeColor = 'hsl(0, 0%, 90%)';
 
   const isDarkMode = document.body.classList.contains('dark-theme');
 
   if (isDarkMode) {
-    metaTag.setAttribute('content', 'hsl(0, 0%, 8%)');
+    metaTag.setAttribute('content', 'darkModeColor');
   } else {
-    metaTag.setAttribute('content', 'hsl(0, 0%, 90%)');
+    metaTag.setAttribute('content', 'lightModeColor');
   }
 };
 
