@@ -139,7 +139,7 @@ const toggleThemeTab = () => {
   const metaTag = document.querySelector('meta[name="theme-color"]');
 
   // Check if the body has a dark theme class
-  const isDarkMode = document.body.classList.contains('dark-theme');
+  const isDarkMode = document.body.classList.contains('dark');
 
   if (isDarkMode) {
     // Set the meta tag content to the dark mode color
