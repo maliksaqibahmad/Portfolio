@@ -140,7 +140,7 @@ const updateMetaThemeColor = () => {
 
   const currentTheme = getCurrentTheme();
 
-  if (currentTheme === 'dark') {
+  if (currentTheme === 'dark-theme') {
     metaTag.setAttribute('content', 'hsl(0, 0%, 8%)');
   } else {
     metaTag.setAttribute('content', 'hsl(0, 0%, 90%)');
