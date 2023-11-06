@@ -144,11 +144,9 @@ const lightButton = document.getElementById('light-button');
 
         lightButton.addEventListener('click', () => {
             if (isDarkMode) {
-                // Revert to the default color for light mode
                 metaTag.setAttribute('content', defaultColor);
                 isDarkMode = false;
             } else {
-                // Set the color for dark mode
                 metaTag.setAttribute('content', darkModeColor);
                 isDarkMode = true;
             }
