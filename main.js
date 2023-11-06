@@ -137,7 +137,7 @@ window.onscroll = function() {
 
 const lightButton = document.getElementById('light-button');
         const metaTag = document.querySelector('meta[name="theme-color"]');
-        const defaultColor = 'hsl(0, 0%, 95%)';
+        const defaultColor = 'hsl(14, 98%, 50%)';
         const darkModeColor = 'hsl(0, 0%, 8%)';
 
         let isDarkMode = false;
