@@ -135,33 +135,21 @@ window.onscroll = function() {
     prevScrollPos = currentScrollPos;
 };
 
-const themeButtonTab = document.getElementById('light-button');
-const metaTag = document.querySelector('meta[name="theme-color"]');
-const darkModeColor = 'hsl(0, 0%, 8%)';
-const lightModeColor = 'hsl(0, 0%, 85%)';
+const lightButton = document.getElementById('light-button');
+        const metaTag = document.querySelector('meta[name="theme-color"]');
+        const defaultColor = 'hsl(0, 0%, 85%)';
+        const darkModeColor = 'hsl(0, 0%, 8%)';
 
-const selectedThemeTab = localStorage.getItem('selected-theme');
+        let isDarkMode = false;
 
-const toggleThemeTab = () => {
-  const isDarkMode = document.body.classList.contains('dark-theme');
-
-  if (isDarkMode) {
-    document.body.classList.remove('dark-theme');
-    metaTag.setAttribute('content', lightModeColor);
-    localStorage.setItem('selected-theme', 'light');
-  } else {
-    document.body.classList.add('dark-theme');
-    metaTag.setAttribute('content', darkModeColor);
-    localStorage.setItem('selected-theme', 'dark');
-  }
-};
-
-themeButtonTab.addEventListener('click', () => {
-  toggleTheme();
-  toggleMetaTheme();
-});
-
-if (selectedThemeTab === 'dark') {
-  document.body.classList.add('dark-theme');
-  metaTag.setAttribute('content', darkModeColor);
-}
+        lightButton.addEventListener('click', () => {
+            if (isDarkMode) {
+                // Revert to the default color for light mode
+                metaTag.setAttribute('content', defaultColor);
+                isDarkMode = false;
+            } else {
+                // Set the color for dark mode
+                metaTag.setAttribute('content', darkModeColor);
+                isDarkMode = true;
+            }
+        });
