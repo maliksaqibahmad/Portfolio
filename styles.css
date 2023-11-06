@@ -10,7 +10,7 @@
   --title-color: hsl(0, 0%, 0%);
   --text-color: hsl(0, 0%, 35%);
   --text-color-light: hsl(0, 0%, 64%);
-  --body-color: hsl(0, 0%, 85%);
+  --body-color: hsl(0, 0%, 95%);
   --container-color: hsl(0, 0%, 90%);
 
   --body-font: "Bai Jamjuree", sans-serif;
@@ -424,7 +424,7 @@ img {
   position: absolute;
   bottom: -.75rem;
   right: -.75rem;
-  border: 5rem solid var(--first-color);
+  border: .3rem solid var(--black-color);
   z-index: 5;
   transition: .4s;
 }
@@ -704,7 +704,7 @@ img {
 .services__content {
   height: 100%;
   background-color: var(--body-color);
-  border: 4px solid var(--black-color);
+  border: .25rem solid var(--black-color);
   padding: 6rem 1rem 3rem;
   z-index: 5;
   position: relative;
@@ -757,14 +757,13 @@ img {
 .projects__card {
   margin: 5px;
   padding: 1rem 1rem 2rem;
-  transition: background-color .4s;
-  border: 4px solid var(--black-color);
   max-width: 500px;
   cursor: default;
   transition: .2s !important;
 }
 
 .projects__card:hover {
+  border: .1rem solid var(--black-color);
   transform: scale(1.1) !important;
   box-shadow: 10px 10px 0px 0px var(--black-color);
 -webkit-box-shadow: 10px 10px 0px 0px var(--black-color);
@@ -1267,7 +1266,7 @@ img {
   .home__shadow {
     right: -1rem;
     bottom: -1rem;
-    border: 2rem solid var(--first-color);
+    border: .3rem solid var(--black-color);
   }
   .home__name,
   .home__description {
@@ -1414,7 +1413,7 @@ img {
   }
   .services__content {
     padding: 6.5rem 1.5rem 3.5rem;
-    border: 6px solid var(--black-color); 
+    border: .25rem solid var(--black-color); 
   }
   .services__icon i {
     font-size: 3rem;
