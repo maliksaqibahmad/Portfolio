@@ -650,6 +650,12 @@ img {
   cursor: default;
 }
 
+.cert__img {
+  height: 11rem;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
 .certs__content {
   background-color: var(--body-color);
   border: 4px solid var(--black-color);
