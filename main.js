@@ -108,7 +108,7 @@ themeButton.addEventListener('click', toggleTheme);
 
 const sr = ScrollReveal({
   origin: 'top',
-  distance: '6rem',
+  distance: '10rem',
   durarion: 1250,
   delay: 400,
   reset: true
