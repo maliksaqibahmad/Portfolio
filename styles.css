@@ -662,11 +662,10 @@ img {
   padding: 1rem 1rem;
   z-index: 5;
   position: relative;
-  transition: .2s;
+  transition: .3s;
 }
 
 .certs__content:hover {
-  transform: scale(1.1) !important;
   box-shadow: 10px 10px 0px 0px var(--black-color);
 -webkit-box-shadow: 10px 10px 0px 0px var(--black-color);
 -moz-box-shadow: 10px 10px 0px 0px var(--black-color);
@@ -714,11 +713,10 @@ img {
   padding: 6rem 1rem 3rem;
   z-index: 5;
   position: relative;
-  transition: .2s;
+  transition: .3s;
 }
 
 .services__content:hover {
-  transform: scale(1.1) !important;
   box-shadow: 10px 10px 0px 0px var(--black-color);
 -webkit-box-shadow: 10px 10px 0px 0px var(--black-color);
 -moz-box-shadow: 10px 10px 0px 0px var(--black-color);
@@ -765,12 +763,11 @@ img {
   padding: 1rem 1rem 2rem;
   max-width: 500px;
   cursor: default;
-  transition: .2s !important;
+  transition: .3s !important;
 }
 
 .projects__card:hover {
   border: .1rem solid var(--black-color);
-  transform: scale(1.1) !important;
   box-shadow: 10px 10px 0px 0px var(--black-color);
 -webkit-box-shadow: 10px 10px 0px 0px var(--black-color);
 -moz-box-shadow: 10px 10px 0px 0px var(--black-color);
