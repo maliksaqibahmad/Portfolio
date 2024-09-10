@@ -1,153 +1,155 @@
-const navMenu = document.getElementById('nav-menu')
-const navToggle = document.getElementById('nav-toggle')
-const navClose = document.getElementById('nav-close')
+document.addEventListener('DOMContentLoaded', function() {
+  // Navigation menu functionality
+  const navMenu = document.getElementById('nav-menu');
+  const navToggle = document.getElementById('nav-toggle');
+  const navClose = document.getElementById('nav-close');
+  const navLink = document.querySelectorAll('.nav__link');
 
-if(navToggle){
-  navToggle.addEventListener('click', () => {
-    navMenu.classList.add('show-menu')
-  })
-}
+  if(navToggle) {
+      navToggle.addEventListener('click', () => {
+          navMenu.classList.add('show-menu');
+      });
+  }
 
-if(navClose){
-  navClose.addEventListener('click', () => {
-    navMenu.classList.remove('show-menu')
-  })
-}
+  if(navClose) {
+      navClose.addEventListener('click', () => {
+          navMenu.classList.remove('show-menu');
+      });
+  }
 
-const navLink = document.querySelectorAll('.nav__link')
+  const linkAction = () => {
+      navMenu.classList.remove('show-menu');
+  };
+  navLink.forEach(n => n.addEventListener('click', linkAction));
 
-const linkAction = () => {
-  navMenu.classList.remove('show-menu')
-}
-navLink.forEach(n => n.addEventListener('click', linkAction))
+  // Header shadow on scroll
+  const shadowHeader = () => {
+      const header = document.getElementById('header');
+      if (window.scrollY >= 50) {
+          header.classList.add('shadow-header');
+      } else {
+          header.classList.remove('shadow-header');
+      }
+  };
+  window.addEventListener('scroll', shadowHeader);
 
-const shadowHeader = () => {
-  const header = document.getElementById('header')
-  this.scrollY >= 50 ? header.classList.add('shadow-header')
-  : header.classList.remove('shadow-header')
-}
-window.addEventListener('scroll', shadowHeader)
+  // Contact form functionality
+  const contactForm = document.getElementById('contact-form');
+  const contactMessage = document.getElementById('contact-message');
 
-const contactForm = document.getElementById('contact-form')
-const contactMessage = document.getElementById('contact-message')
+  const sendEmail = (e) => {
+      e.preventDefault();
 
-const sendEmail = (e) => {
-e.preventDefault()
+      emailjs.sendForm("service_lxev7p8", "template_s9cmduo", "#contact-form", "E4mCxvYZo-gW6zHnT")
+          .then(() => {
+              contactMessage.textContent = 'Message sent successfully ✅';
+              setTimeout(() => {
+                  contactMessage.textContent = '';
+              }, 5000);
+              contactForm.reset();
+          }, () => {
+              contactMessage.textContent = 'Message not sent (service error) ❌';
+          });
+  };
 
-emailjs.sendForm("service_lxev7p8", "template_s9cmduo", "#contact-form", "E4mCxvYZo-gW6zHnT")
-.then(() => {
-    contactMessage.textContent = 'Message sent successfully ✅'
+  contactForm.addEventListener('submit', sendEmail);
 
-    setTimeout(() => {
-      contactMessage.textContent = ''
-    }, 5000)
+  // Scroll up button functionality
+  const scrollUp = () => {
+      const scrollUp = document.getElementById('scroll-up');
+      if (window.scrollY >= 350) {
+          scrollUp.classList.add('show-scroll');
+      } else {
+          scrollUp.classList.remove('show-scroll');
+      }
+  };
+  window.addEventListener('scroll', scrollUp);
 
-    contactForm.reset()
-}, () => {
-  contactMessage.textContent = 'Message not sent (service error) ❌'
-})
-}
+  // Active link state on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const scrollActive = () => {
+      const scrollDown = window.scrollY;
+      sections.forEach(current => {
+          const sectionHeight = current.offsetHeight;
+          const sectionTop = current.offsetTop - 58;
+          const sectionId = current.getAttribute('id');
+          const sectionClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']');
+          if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
+              sectionClass.classList.add('active-link');
+          } else {
+              sectionClass.classList.remove('active-link');
+          }
+      });
+  };
+  window.addEventListener('scroll', scrollActive);
 
-contactForm.addEventListener('submit', sendEmail)
+  // Theme toggle functionality
+  const themeButton = document.getElementById('light-button');
+  const darkTheme = 'dark-theme';
+  const iconTheme = 'ri-sun-line';
 
-const scrollUp = () => {
-  const scrollUp = document.getElementById('scroll-up')
-this.scrollY >= 350 ?scrollUp.classList.add('show-scroll')
-: scrollUp.classList.remove('show-scroll')
-}
-window.addEventListener('scroll', scrollUp)
+  const selectedTheme = localStorage.getItem('selected-theme');
+  const selectedIcon = localStorage.getItem('selected-icon');
 
-const sections = document.querySelectorAll('section[id]')
+  const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light';
+  const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'dark-theme' : 'ri-sun-line';
 
-const scrollActive = () => {
-  const scrollDown = window.scrollY
-  sections.forEach(current => {
-    const sectionHeight = current.offsetHeight,
-    sectionTop = current.offsetTop - 58,
-    sectionId = current.getAttribute('id'),
-    sectionClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
- if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight){
-  sectionClass.classList.add('active-link')
- } else{
-  sectionClass.classList.remove('active-link')
- }
- 
-  })
-}
-window.addEventListener('scroll', scrollActive)
+  const toggleTheme = () => {
+      document.body.classList.toggle(darkTheme);
+      themeButton.classList.toggle(iconTheme);
+      localStorage.setItem('selected-theme', getCurrentTheme());
+      localStorage.setItem('selected-icon', getCurrentIcon());
+  };
 
-const themeButton = document.getElementById('light-button');
-const darkTheme = 'dark-theme';
-const iconTheme = 'ri-sun-line';
+  if (selectedTheme) {
+      document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
+      themeButton.classList[selectedIcon === 'dark-theme' ? 'add' : 'remove'](iconTheme);
+  }
 
-const selectedTheme = localStorage.getItem('selected-theme');
-const selectedIcon = localStorage.getItem('selected-icon');
+  themeButton.addEventListener('click', toggleTheme);
 
-const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light';
-const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'dark-theme' : 'ri-sun-line';
+  // Loader
+  const loaderContainer = document.querySelector('.loader-container');
+  if (loaderContainer) {
+      loaderContainer.style.display = 'none';
+  }
 
-const toggleTheme = () => {
-  document.body.classList.toggle(darkTheme);
-  themeButton.classList.toggle(iconTheme);
-  
-  localStorage.setItem('selected-theme', getCurrentTheme());
-  localStorage.setItem('selected-icon', getCurrentIcon());
-};
+  // ScrollReveal initialization
+  const sr = ScrollReveal({
+      origin: 'top',
+      distance: '50px',
+      duration: 1250,
+      delay: 100,
+      reset: true
+  });
 
-if (selectedTheme) {
-  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
-  themeButton.classList[selectedIcon === 'dark-theme' ? 'add' : 'remove'](iconTheme);
-}
+  sr.reveal('.home__perfil, .about__image, .contact__mail', {origin: 'right'});
+  sr.reveal('.home__name, .home__info, .about__container, .section__title-1, .about__info, .contact__social, .contact__data, .section__title-2', {origin: 'left'});
+  sr.reveal('.services__card, .certs__card, .projects__card', {interval: 100});
+  sr.reveal('.skill', {interval: 60});
 
-themeButton.addEventListener('click', toggleTheme);
+  // Header hide/show on scroll
+  let prevScrollPos = window.pageYOffset;
+  const header = document.querySelector('.header');
 
-       window.addEventListener('load', function () { 
-         const loaderContainer = document.querySelector('.loader-container'); 
-         loaderContainer.style.display = 'none'; 
-       });
+  window.onscroll = function() {
+      const currentScrollPos = window.pageYOffset;
+      if (prevScrollPos > currentScrollPos) {
+          header.style.top = '0';
+      } else {
+          header.style.top = `-${header.clientHeight}px`;
+      }
+      prevScrollPos = currentScrollPos;
+  };
 
-const sr = ScrollReveal({
-  origin: 'top',
-  distance: '10rem',
-  durarion: 1250,
-  delay: 400,
-  reset: true
-})
+  // Theme color for mobile browsers
+  const metaTag = document.querySelector('meta[name="theme-color"]');
+  const defaultColor = 'hsl(0, 0%, 95%)';
+  const darkModeColor = 'hsl(0, 0%, 8%)';
+  let isDarkMode = false;
 
-sr.reveal(`.home__perfil, .about__image, .contact__mail`, {origin: 'right'})
-sr.reveal(`.home__name, .home__info, .about__container, .section__title-1, .about__info, .contact__social, .contact__data, .section__title-2`, {origin: 'left'})
-sr.reveal(`.services__card, .certs__card, .projects__card` ,{interval: 100})
-sr.reveal(`.skill` ,{interval: '100'})
-
-
-let prevScrollPos = window.pageYOffset;
-const header = document.querySelector('.header');
-
-window.onscroll = function() {
-    const currentScrollPos = window.pageYOffset;
-
-    if (prevScrollPos < currentScrollPos) {
-        header.style.top = `-${header.clientHeight}px`;
-    } else {
-        header.style.top = '0';
-    }
-
-    prevScrollPos = currentScrollPos;
-};
-
-const lightButton = document.getElementById('light-button');
-        const metaTag = document.querySelector('meta[name="theme-color"]');
-        const defaultColor = 'hsl(0, 0%, 95%)';
-        const darkModeColor = 'hsl(0, 0%, 8%)';
-
-        let isDarkMode = false;
-
-        lightButton.addEventListener('click', () => {
-            if (isDarkMode) {
-                metaTag.setAttribute('content', defaultColor);
-                isDarkMode = false;
-            } else {
-                metaTag.setAttribute('content', darkModeColor);
-                isDarkMode = true;
-            }
-        });
+  lightButton.addEventListener('click', () => {
+      isDarkMode = !isDarkMode;
+      metaTag.setAttribute('content', isDarkMode ? darkModeColor : defaultColor);
+  });
+});
