@@ -288,6 +288,7 @@ body.dark-theme {
     width: 100%;
     padding-block: 1.8rem 5rem;
     text-align: center;
+    -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     transition: top 0.4s;
     z-index: var(--z-fixed);
