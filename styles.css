@@ -1129,9 +1129,7 @@ body.dark-theme {
 }
 
 @media screen and (max-width: 440px) {
-  .container {
-    margin-inline: 1rem;
-  }
+  
   .home__image {
     width: 180px;
   }
