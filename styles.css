@@ -843,7 +843,7 @@ body.dark-theme {
 }
 
 .projects__img {
-  width: 350px;
+  width: 100%;
   height: 160px;
 }
 
