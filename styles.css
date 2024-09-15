@@ -954,9 +954,7 @@ body.dark-theme {
 }
 
 .contact__input:-webkit-autofill {
-  transition:
-    background-color 6000s,
-    color 6000s;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .contact__label {
