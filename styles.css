@@ -1432,7 +1432,6 @@ body.dark-theme {
     text-align: initial;
   }
   .contact__social-data {
-    flex-direction: row;
     column-gap: 1.25rem;
     align-items: center;
   }
