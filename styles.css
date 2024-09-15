@@ -650,7 +650,6 @@ body.dark-theme {
 }
 
 .cert__img {
-  height: 11rem;
   margin: 0 auto;
   object-fit: cover;
 }
@@ -842,10 +841,10 @@ body.dark-theme {
   color: var(--first-color);
 }
 
-.projects__img {
+/* .projects__img {
   width: 300px;
   height: 150px;
-}
+} */
 
 .contact {
   padding-bottom: 0;
