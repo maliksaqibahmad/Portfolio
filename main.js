@@ -156,19 +156,19 @@ document.addEventListener("DOMContentLoaded", function () {
     console.error("Error initializing ScrollReveal:", error);
   }
 
-  // // Header hide/show on scroll
-  // let prevScrollPos = window.pageYOffset;
-  // const header = document.querySelector(".header");
+  // Header hide/show on scroll
+  let prevScrollPos = window.pageYOffset;
+  const header = document.querySelector(".header");
 
-  // window.onscroll = function () {
-  //   const currentScrollPos = window.pageYOffset;
-  //   if (prevScrollPos > currentScrollPos) {
-  //     header.style.top = "0";
-  //   } else {
-  //     header.style.top = `-${header.clientHeight}px`;
-  //   }
-  //   prevScrollPos = currentScrollPos;
-  // };
+  window.onscroll = function () {
+    const currentScrollPos = window.pageYOffset;
+    if (prevScrollPos > currentScrollPos) {
+      header.style.top = "0";
+    } else {
+      header.style.top = `-${header.clientHeight}px`;
+    }
+    prevScrollPos = currentScrollPos;
+  };
 
   // Theme color for mobile browsers
   const metaTag = document.querySelector('meta[name="theme-color"]');
