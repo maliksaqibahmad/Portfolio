@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
     sr.reveal(".services__card, .certs__card, .projects__card", {
       origin: "bottom",
     });
-    sr.reveal(".skill", { interval: 50 });
+    sr.reveal(".skill", { interval: 30 });
   } catch (error) {
     console.error("Error initializing ScrollReveal:", error);
   }
