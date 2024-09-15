@@ -402,6 +402,7 @@ body.dark-theme {
 .home__perfil {
   position: relative;
   justify-self: center;
+  margin-top: -4rem;
 }
 
 .home__image {
@@ -1206,7 +1207,7 @@ body.dark-theme {
     transform: scale(1.2);
   }
   .nav {
-    height: calc(var(--header-height) + 2rem);
+    height: calc(var(--header-height) + 1.5rem);
     column-gap: 4rem;
   }
   .nav__close,
@@ -1256,7 +1257,7 @@ body.dark-theme {
     grid-template-columns: repeat(2, 460px);
     gap: 2rem 4rem;
     align-items: center;
-    padding-block: 5.5rem;
+    padding-block: 5rem;
   }
   .home__perfil {
     grid-column: 2/3;
