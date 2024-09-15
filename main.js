@@ -138,7 +138,6 @@ document.addEventListener("DOMContentLoaded", function () {
       distance: "50px",
       duration: 1250,
       delay: 100,
-      reset: true,
     });
   
     sr.reveal(".home-section .perfil-container, .about-section .image-container, .contact-section .mail-container", {
