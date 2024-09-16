@@ -1,7 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap");
-
 :root {
-  --header-height: 3.5rem;
+  --header-height: 3rem;
 
   --first-color: hsl(14, 98%, 50%);
   --black-color: hsl(0, 0%, 0%);
