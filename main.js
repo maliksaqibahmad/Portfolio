@@ -97,11 +97,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   themeButton.addEventListener("click", toggleTheme);
 
-  // Loader
-  const loaderContainer = document.querySelector(".loader-container");
-  if (loaderContainer) {
-    loaderContainer.style.display = "none";
-  }
 
   // ScrollReveal initialization
   try {
@@ -140,15 +135,23 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     prevScrollPos = currentScrollPos;
   };
+  
+  // Loader
 
-  // Theme color for mobile browsers
-  // const metaTag = document.querySelector('meta[name="theme-color"]');
-  // const defaultColor = "hsl(0, 0%, 95%)";
-  // const darkModeColor = "hsl(0, 0%, 8%)";
-  // let isDarkMode = false;
+  const loaderContainer = document.querySelector(".loader-container");
 
-  // lightButton.addEventListener("click", () => {
-  //   isDarkMode = !isDarkMode;
-  //   metaTag.setAttribute("content", isDarkMode ? darkModeColor : defaultColor);
-  // });
+        function hideLoader() {
+            loaderContainer.classList.add('hidden');
+            // Remove the loader from the DOM after the transition
+            setTimeout(() => {
+                loaderContainer.remove();
+            }, 300);
+        }
+
+        // Hide the loader when the page is fully loaded
+        window.addEventListener("load", hideLoader);
+
+        // Fallback: Hide the loader after 5 seconds if the load event hasn't fired
+        setTimeout(hideLoader, 5000);
+
 });
