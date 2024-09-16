@@ -840,11 +840,6 @@ body.dark-theme {
   color: var(--first-color);
 }
 
-.projects__img {
-  width: 100%;
-  height: 160px;
-}
-
 .contact {
   padding-bottom: 0;
 }
