@@ -170,13 +170,13 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   // Theme color for mobile browsers
-  const metaTag = document.querySelector('meta[name="theme-color"]');
-  const defaultColor = "hsl(0, 0%, 95%)";
-  const darkModeColor = "hsl(0, 0%, 8%)";
-  let isDarkMode = false;
+  // const metaTag = document.querySelector('meta[name="theme-color"]');
+  // const defaultColor = "hsl(0, 0%, 95%)";
+  // const darkModeColor = "hsl(0, 0%, 8%)";
+  // let isDarkMode = false;
 
-  lightButton.addEventListener("click", () => {
-    isDarkMode = !isDarkMode;
-    metaTag.setAttribute("content", isDarkMode ? darkModeColor : defaultColor);
-  });
+  // lightButton.addEventListener("click", () => {
+  //   isDarkMode = !isDarkMode;
+  //   metaTag.setAttribute("content", isDarkMode ? darkModeColor : defaultColor);
+  // });
 });
