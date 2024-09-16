@@ -34,34 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", shadowHeader);
 
   // Contact form functionality
-  const contactForm = document.getElementById("contact-form");
-  const contactMessage = document.getElementById("contact-message");
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_lxev7p8",
-        "template_s9cmduo",
-        "#contact-form",
-        "E4mCxvYZo-gW6zHnT",
-      )
-      .then(
-        () => {
-          contactMessage.textContent = "Message sent successfully ✅";
-          setTimeout(() => {
-            contactMessage.textContent = "";
-          }, 5000);
-          contactForm.reset();
-        },
-        () => {
-          contactMessage.textContent = "Message not sent (service error) ❌";
-        },
-      );
-  };
-
-  contactForm.addEventListener("submit", sendEmail);
 
   // Scroll up button functionality
   const scrollUp = () => {
