@@ -618,7 +618,7 @@ body.dark-theme {
 @media (max-width: 768px) {
   .skills {
     justify-content: center;
-    margin: 3rem 0 0;
+    margin: 4rem;
   }
 
   .skill {
