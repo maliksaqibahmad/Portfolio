@@ -582,7 +582,7 @@ body.dark-theme {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 6rem;
+  margin: 4rem;
 }
 
 .skill {
@@ -981,7 +981,7 @@ body.dark-theme {
 }
 
 .contact__button {
-  background: var(--black-color);
+  background: var(--first-color);
   cursor: pointer;
 }
 
