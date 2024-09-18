@@ -400,6 +400,7 @@ body.dark-theme {
 .home__perfil {
   position: relative;
   justify-self: center;
+  margin-top: -1rem;
 }
 
 .home__image {
