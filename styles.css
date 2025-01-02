@@ -405,10 +405,11 @@ body.dark-theme {
 
 .home__image {
   position: relative;
+  width: 15rem;
 }
 
 .home__img {
-  width: 15rem;
+  width: 100%;
   height: auto;
   position: relative;
   z-index: 10;
